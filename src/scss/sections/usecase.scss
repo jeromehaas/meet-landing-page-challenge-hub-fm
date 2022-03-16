@@ -1,42 +1,43 @@
-.hero {
-	margin: 80px auto 64px auto;
+.usecases {
 
-	&__inner {
+	&__images {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: center;
+		margin-bottom: 80px;
 	}
 
-	&__logo, .logo {
-		display: block;
+	&__image {
+		width: 100%;
+		max-width: 255px;
+		max-height: 242px;
+		border-radius: 8px;
+
+		&:not(:last-child) {
+			margin-right: 32px;
+		}
+
+	}
+
+	&__text-container {
 		margin: 0 auto;
-		position: relative;
+		max-width: 540px;
 
-		&__point, .point {
-			width: 14px;
-			height: 14px;
-			border-radius: 50%;
-			position: absolute;
-			
-			&--blue {
-				background-color: $hippie-blue;
-				left: -32px;
-				top: 16px;
-			}
-			
-			&--violet {
-				background-color: $delunge-violet;
-				left: -24px;
-			}
-		}
+	}
+	&__pretitle {
+		color: $hippie-blue;
+		text-align: center;
+		margin-bottom: 16px;
+	}
 
+	&__title {
+		text-align: center;
+		margin-bottom: 32px;
+	}
 
-		&__text {
-			font-size: 24px;
-			font-weight: 900;
-			text-align: center;
-		}
-
+	&__text {
+		text-align: center;
+		margin-bottom: 72px;
 	}
 
 }

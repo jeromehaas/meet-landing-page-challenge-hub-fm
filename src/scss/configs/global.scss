@@ -9,7 +9,59 @@
 	-webkit-appearance: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, li, td, a, span, button, figure {
-	font-family: "Red-Hat-Display";
-	font-weight: 300;
+.section {
+	overflow: hidden;
+}
+
+.button {
+	padding: 16px 32px;
+	color: white;	
+	border-radius: 32px;
+	cursor: pointer;
+
+	
+	&--version {
+		margin-left: 4px;
+	}
+	
+	&--violet {
+		background-color: $delunge-violet;
+
+		&:hover { 
+			background: lighten($delunge-violet, 10%) 
+		}
+		
+	}
+	
+	&--blue {
+		background-color: $hippie-blue;
+		
+		&:hover { 
+			background: lighten($hippie-blue, 10%) 
+		}
+
+	}
+	
+}
+
+
+.navigator {
+	
+	&__line {
+		height: 80px;
+		width: 1px;
+		background-color: transparentize($mantree-grey, 0.75);
+		margin: 0 auto;
+	}
+	
+	&__index {
+		width: 56px;
+		height: 56px;
+		border: 1px solid transparentize($mantree-grey, 0.75); 
+		border-radius: 50%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
