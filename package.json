@@ -1,0 +1,11 @@
+{
+  "name": "meet-landing-page-challenge-hub-fm",
+  "version": "1.0.0",
+  "description": "A challenge from FrontendMentor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jérôme Haas",
+  "license": "ISC"
+}
