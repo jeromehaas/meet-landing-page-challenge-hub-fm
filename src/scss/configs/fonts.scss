@@ -1,0 +1,59 @@
+font-face {
+	font-family: 'Red-Hat-Display';
+	src: 
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-light.ttf') format('ttf'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-light.woff') format('woff'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-light.woff2') format('woff2');
+	font-display: block;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Red-Hat-Display';
+	src: 
+	local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-regular.ttf') format('ttf'),
+	local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-regular.woff') format('woff'),
+	local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-regular.woff2') format('woff2');
+	font-display: block;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Red-Hat-Display';
+	src: 
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-medium.ttf') format('ttf'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-medium.woff') format('woff'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-medium.woff2') format('woff2');
+	font-display: block;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Red-Hat-Display';
+	src: 
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-bold.ttf') format('ttf'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-bold.woff') format('woff'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-bold.woff2') format('woff2');
+	font-display: block;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Red-Hat-Display';
+	src: 
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-extrabold.ttf') format('ttf'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-extrabold.woff') format('woff'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-extrabold.woff2') format('woff2');
+	font-display: block;
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'Red-Hat-Display';
+	src: 
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-black.ttf') format('ttf'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-black.woff') format('woff'),
+		local('fonts/red-hat-display'), url('/src/assets/fonts/red-hat-display/red-hat-display-black.woff2') format('woff2');
+	font-display: block;
+	font-weight: 900;
+}
