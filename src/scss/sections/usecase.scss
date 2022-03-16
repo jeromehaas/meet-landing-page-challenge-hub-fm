@@ -1,0 +1,42 @@
+.hero {
+	margin: 80px auto 64px auto;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__logo, .logo {
+		display: block;
+		margin: 0 auto;
+		position: relative;
+
+		&__point, .point {
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			position: absolute;
+			
+			&--blue {
+				background-color: $hippie-blue;
+				left: -32px;
+				top: 16px;
+			}
+			
+			&--violet {
+				background-color: $delunge-violet;
+				left: -24px;
+			}
+		}
+
+
+		&__text {
+			font-size: 24px;
+			font-weight: 900;
+			text-align: center;
+		}
+
+	}
+
+}
