@@ -1,72 +1,83 @@
 * {
-	box-sizing: border-box;
-	scrollbar-width: none;
-	scroll-behavior: smooth;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
-	display: none;
-	-webkit-appearance: none;
+  display: none;
+  -webkit-appearance: none;
 }
 
 .section {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .button {
-	padding: 16px 32px;
-	color: white;	
-	border-radius: 32px;
-	cursor: pointer;
+  padding: 16px 32px;
+  color: white;
+  border-radius: 32px;
+  cursor: pointer;
+  font-weight: 900;
 
-	
-	&__version {
-		margin-left: 4px;
-	}
-	
-	&--violet {
-		background-color: $delunge-violet;
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
 
-		&:hover { 
-			background: lighten($delunge-violet, 10%) 
-		}
-		
-	}
-	
-	&--blue {
-		background-color: $hippie-blue;
-		
-		&:hover { 
-			background: lighten($hippie-blue, 10%) 
-		}
+  &__version {
+    margin-left: 4px;
+  }
+
+  &--violet {
+    background-color: $delunge-violet;
+
+    &:hover {
+      background: lighten($delunge-violet, 10%);
+    }
+
+    .button__version {
+      color: $mauve-purple;
+    }
+
+  }
+
+  &--blue {
+    background-color: $hippie-blue;
+
+    &:hover {
+      background: lighten($hippie-blue, 10%);
+    }
+
+    .button__version {
+      color: $malibu-blue;
+    }
 
 	}
-	
+
 }
 
-
 .navigator {
-	z-index: 5;
-	position: relative;
-	
-	&__line {
-		height: 80px;
-		width: 1px;
-		background-color: transparentize($mantree-grey, 0.75);
-		margin: 0 auto;
-	}
-	
-	&__index {
-		z-index: 5;
-		width: 56px;
-		height: 56px;
-		background-color: $alabaster-white;
-		border: 1px solid transparentize($mantree-grey, 0.75); 
-		border-radius: 50%;
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+  z-index: 5;
+  position: relative;
+
+  &__line {
+    height: 80px;
+    width: 1px;
+    background-color: transparentize($mantree-grey, 0.75);
+    margin: 0 auto;
+  }
+
+  &__index {
+    z-index: 5;
+    width: 56px;
+    height: 56px;
+    background-color: $alabaster-white;
+    border: 1px solid transparentize($mantree-grey, 0.75);
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 }

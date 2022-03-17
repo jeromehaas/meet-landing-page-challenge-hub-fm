@@ -1,36 +1,59 @@
 .cta {
-	margin-top: -22px;
-	// position: relative;
-	// top: -22px;
-	background: url('/assets//images/cta/wallpaper.png');
+  margin-top: -22px;
+  background: url("/assets//images/cta/wallpaper.png") center center;
 
-	&__text-container {
-		margin: 0 auto;
-		padding: 120px 140px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
+  &__text-container {
+    margin: 0 auto;
+    margin: 120px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px + (2 * 16px);
+    padding: 32px;
+  }
 
-	&__title {
-		width: calc(100% / 3);
-		color: $alabaster-white;
-		max-width: 350px;
-	}
-	
-	&__text {
-		width: calc(100% / 3);
-		max-width: 335px;
-		color: $alabaster-white;
-	}
-	
-	&__button, .button {
-	
+  &__title {
+    width: calc(100% / 3);
+    color: $alabaster-white;
+    max-width: 350px;
+  }
+
+  &__text {
+    width: calc(100% / 3);
+    max-width: 335px;
+    color: $alabaster-white;
+  }
+
+  &__button, .button {
+    
 		&__version {
-			color: $mauve-purple;
-		}
-
+      color: $mauve-purple;
+    }
+  
 	}
-	
+
+  @media (max-width: 850px) {
+ 
+		&__text-container {
+      flex-direction: column;
+      margin: 92px 0;
+    }
+
+    &__title {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    &__text {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+ 
+	}
+
 }
