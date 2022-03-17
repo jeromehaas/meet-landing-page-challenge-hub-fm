@@ -20,7 +20,7 @@
 	cursor: pointer;
 
 	
-	&--version {
+	&__version {
 		margin-left: 4px;
 	}
 	
@@ -46,6 +46,8 @@
 
 
 .navigator {
+	z-index: 5;
+	position: relative;
 	
 	&__line {
 		height: 80px;
@@ -55,8 +57,10 @@
 	}
 	
 	&__index {
+		z-index: 5;
 		width: 56px;
 		height: 56px;
+		background-color: $alabaster-white;
 		border: 1px solid transparentize($mantree-grey, 0.75); 
 		border-radius: 50%;
 		margin: 0 auto;
@@ -64,4 +68,5 @@
 		align-items: center;
 		justify-content: center;
 	}
+
 }

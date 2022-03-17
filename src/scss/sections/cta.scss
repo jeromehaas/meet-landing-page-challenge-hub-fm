@@ -1,0 +1,36 @@
+.cta {
+	margin-top: -22px;
+	// position: relative;
+	// top: -22px;
+	background: url('/assets//images/cta/wallpaper.png');
+
+	&__text-container {
+		margin: 0 auto;
+		padding: 120px 140px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		width: calc(100% / 3);
+		color: $alabaster-white;
+		max-width: 350px;
+	}
+	
+	&__text {
+		width: calc(100% / 3);
+		max-width: 335px;
+		color: $alabaster-white;
+	}
+	
+	&__button, .button {
+	
+		&__version {
+			color: $mauve-purple;
+		}
+
+	}
+	
+}
