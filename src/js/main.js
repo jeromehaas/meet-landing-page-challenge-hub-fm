@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import Cookies from 'js-cookie';
+import moment from 'moment';
 
 class Animation {
 
@@ -88,10 +89,11 @@ class Animation {
   };
 	
 	checkAnimationCookie() {
-		const animationCookie = Cookies.get('animation');
+		const animationCookie = Cookies.get('last-animation-render');
 		if (!animationCookie) {
 			this.willPlay = true;
-			Cookies.set('animation', 'true', { expires: 1 });
+			const today = moment().format();
+			Cookies.set('last-animation-render', today, { expires: 1 });
 		} else {
 			this.willPlay = false;
 		};
