@@ -9,6 +9,11 @@
   -webkit-appearance: none;
 }
 
+body {
+	width: 100vw;
+	overflow-x: hidden;
+}
+
 .section {
   overflow: hidden;
 }
