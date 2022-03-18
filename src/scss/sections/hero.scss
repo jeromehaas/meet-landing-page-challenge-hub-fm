@@ -5,12 +5,25 @@
     justify-content: flex-start;
   }
 
-  &__logo, .logo {
-    display: block;
+  &__logo,
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 80px auto 104px auto;
     position: relative;
 
-    &__point, .point {
+    &__points-container {
+      position: relative;
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      ;
+    }
+
+    &__point,
+    .point {
       width: 14px;
       height: 14px;
       border-radius: 50%;
@@ -18,27 +31,28 @@
 
       &--violet {
         background-color: $delunge-violet;
-        right: calc(100% + 10px);
-        top: -2px;
+        right: 0;
+        top: 0;
       }
 
       &--blue {
         background-color: $hippie-blue;
-        right: calc(100% + 24px);
-        top: 10px;
+        left: 0;
+        bottom: 0;
       }
 
-		}
+    }
 
     &__text {
       font-size: 24px;
       font-weight: 900;
       text-align: center;
-		}
+    }
 
-	}
+  }
 
-  &__intro, .intro {
+  &__intro,
+  .intro {
     margin: 0 auto;
     position: relative;
     display: grid;
@@ -72,7 +86,8 @@
       align-items: center;
     }
 
-    &__personas, .personas {
+    &__personas,
+    .personas {
       position: absolute;
       display: grid;
       grid-template-rows: repeat(3, fr);
@@ -102,20 +117,21 @@
           top: 48px;
         }
 
-			}
+      }
 
-		}
+    }
 
     &__navigator {
       grid-area: navigator;
       margin-bottom: 64px;
     }
 
-	}
+  }
 
   @media (max-width: 1150px) {
-    
-		&__intro, .intro {
+
+    &__intro,
+    .intro {
       padding-top: 400px;
       grid-template-areas:
         "personas-first personas-last"
@@ -124,11 +140,12 @@
 
       &__text-container {
         min-width: 100%;
-			}
+      }
 
-		}
+    }
 
-    &__personas, .personas {
+    &__personas,
+    .personas {
       grid-gap: 48px !important;
 
       &--first {
@@ -142,7 +159,7 @@
           top: -48px !important;
         }
 
-			}
+      }
 
       &--last {
         left: 0% !important;
@@ -162,7 +179,7 @@
           top: -48px !important;
         }
 
-			}
+      }
 
       &__image {
         width: 140px !important;
@@ -170,17 +187,19 @@
         border-radius: 50%;
       }
 
-		}
+    }
 
-	}
+  }
 
   @media (max-width: 950px) {
 
-		&__intro, .intro {
+    &__intro,
+    .intro {
       padding-top: 350px;
     }
 
-    &__personas, .personas {
+    &__personas,
+    .personas {
       grid-gap: 48px !important;
 
       &--first {
@@ -192,7 +211,7 @@
           top: -48px !important;
         }
 
-			}
+      }
 
       &--last {
         left: 0% !important;
@@ -212,7 +231,7 @@
           top: -48px !important;
         }
 
-			}
+      }
 
       &__image {
         width: 110px !important;
@@ -220,32 +239,35 @@
         border-radius: 50%;
       }
 
-		}
+    }
 
-	}
+  }
 
   @media (max-width: 800px) {
 
-		&__intro, .intro {
+    &__intro,
+    .intro {
       padding-top: 300px;
     }
 
-    &__personas, .personas {
+    &__personas,
+    .personas {
       grid-gap: 32px !important;
 
       &--first {
         bottom: calc(100% + 48px);
 
         .personas__image {
+
           &:nth-child(2),
           &:nth-child(5) {
             position: relative;
             top: -48px !important;
           }
 
-				}
+        }
 
-			}
+      }
 
       &--last {
         left: 0% !important;
@@ -258,32 +280,35 @@
         border-radius: 50%;
       }
 
-		}
+    }
 
-	}
+  }
 
   @media (max-width: 650px) {
 
-		&__intro, .intro {
+    &__intro,
+    .intro {
       padding-top: 300px;
     }
 
-    &__personas, .personas {
+    &__personas,
+    .personas {
       grid-gap: 16px !important;
 
       &--first {
         bottom: calc(100% + 48px);
 
         .personas__image {
+
           &:nth-child(2),
           &:nth-child(5) {
             position: relative;
             top: -48px !important;
           }
 
-				}
+        }
 
-			}
+      }
 
       &--last {
         left: 0% !important;
@@ -296,13 +321,14 @@
         border-radius: 50%;
       }
 
-		}
+    }
 
-	}
+  }
 
   @media (max-width: 500px) {
 
-		&__intro, .intro {
+    &__intro,
+    .intro {
       padding-top: 300px;
 
       &__buttons {
@@ -310,24 +336,26 @@
         gap: 16px;
       }
 
-		}
+    }
 
-    &__personas, .personas {
+    &__personas,
+    .personas {
       grid-gap: 16px !important;
 
       &--first {
         bottom: calc(100% + 48px);
 
         .personas__image {
+
           &:nth-child(2),
           &:nth-child(5) {
             position: relative;
             top: -48px !important;
           }
 
-				}
+        }
 
-			}
+      }
 
       &--last {
         left: 0% !important;
@@ -340,8 +368,8 @@
         border-radius: 50%;
       }
 
-		}
+    }
 
-	}
+  }
 
 }
