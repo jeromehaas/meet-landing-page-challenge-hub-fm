@@ -7,3 +7,5 @@
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
 */
+
+/*! js-cookie v3.0.1 | MIT */

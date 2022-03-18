@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import Cookies from 'js-cookie';
 
 class Animation {
 
@@ -10,6 +11,7 @@ class Animation {
   };
 
 	init() {
+		this.checkAnimationCookie();
 		window.addEventListener('load', () => {
 			if (this.willPlay) {
 				this.defineElements();
@@ -57,8 +59,6 @@ class Animation {
 			}
     };
 	};
-
-
   
   playTimeline() {
     this.timeline = gsap.timeline({ 
@@ -82,11 +82,20 @@ class Animation {
     this.timeline.from(this.elements.usecases.navigator.index, { scale: 0, duration: 0.25 })
     this.timeline.from(this.elements.usecases.navigator.index, { autoAlpha: 0, duration: 0.25 })
 		this.timeline.from(this.elements.cta.container, { autoAlpha: 0, duration: 0.5 });
-		this.timeline.from(this.elements.cta.title, { autoAlpha: 0, duration: 0.25 });
-		this.timeline.from(this.elements.cta.text, { autoAlpha: 0, duration: 0.25 }, '-=0.25');
-		this.timeline.from(this.elements.cta.button, { autoAlpha: 0, duration: 0.25 }, '-=0.25');
+		this.timeline.from(this.elements.cta.title, { autoAlpha: 0, y: 16, duration: 0.25 });
+		this.timeline.from(this.elements.cta.text, { autoAlpha: 0, y: 16, duration: 0.25 });
+		this.timeline.from(this.elements.cta.button, { autoAlpha: 0, y: 16, duration: 0.25 });
   };
 	
+	checkAnimationCookie() {
+		const animationCookie = Cookies.get('animation');
+		if (!animationCookie) {
+			this.willPlay = true;
+			Cookies.set('animation', 'true', { expires: 1 });
+		} else {
+			this.willPlay = false;
+		};
+	};
 
 }
 
