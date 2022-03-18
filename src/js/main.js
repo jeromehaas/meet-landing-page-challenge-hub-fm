@@ -20,7 +20,7 @@ class Animation {
       if (this.willPlay) {
 				console.log(this.elements.body);
 				this.elements.body.classList.remove('body--hidden');
-        this.playTimeline();
+        // this.playTimeline();
       } else {
 				this.elements.body.classList.remove('body--hidden');
 			};
@@ -98,7 +98,7 @@ class Animation {
   checkAnimationCookie() {
     const animationCookie = Cookies.get('last-animation-render');
     if (!animationCookie) {
-      // this.willPlay = true;
+      this.willPlay = true;
       const today = moment().format();
       Cookies.set('last-animation-render', today, {
         expires: 1
