@@ -20,7 +20,7 @@ class Animation {
       if (this.willPlay) {
 				console.log(this.elements.body);
 				this.elements.body.classList.remove('body--hidden');
-        // this.playTimeline();
+        this.playTimeline();
       } else {
 				this.elements.body.classList.remove('body--hidden');
 			};
