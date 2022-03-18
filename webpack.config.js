@@ -6,6 +6,11 @@ module.exports = {
 		extensions: ['.webpack.js', '.js']
 	},
 	mode: 'production',
+	performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+},
 	output: {
 		filename: '[name].build.js',
 		path: path.join(__dirname, 'js'),
