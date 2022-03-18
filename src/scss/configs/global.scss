@@ -9,9 +9,15 @@
   -webkit-appearance: none;
 }
 
-body {
+body, .body {
 	width: 100vw;
 	overflow-x: hidden;
+	transition: all 1s ease;
+
+	&--hidden {
+		opacity: 0;
+	}
+
 }
 
 .section {

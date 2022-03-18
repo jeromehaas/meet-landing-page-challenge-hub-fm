@@ -16,15 +16,20 @@ class Animation {
   init() {
     this.checkAnimationCookie();
     window.addEventListener('load', () => {
+			this.defineElements();
       if (this.willPlay) {
-        this.defineElements();
+				console.log(this.elements.body);
+				this.elements.body.classList.remove('body--hidden');
         this.playTimeline();
-      };
+      } else {
+				this.elements.body.classList.remove('body--hidden');
+			};
     });
   };
 
   defineElements() {
     this.elements = {
+			body: document.querySelector('body'),
       hero: {
         logo: {
           text: document.querySelector('.logo__text'),
@@ -93,7 +98,7 @@ class Animation {
   checkAnimationCookie() {
     const animationCookie = Cookies.get('last-animation-render');
     if (!animationCookie) {
-      this.willPlay = true;
+      // this.willPlay = true;
       const today = moment().format();
       Cookies.set('last-animation-render', today, {
         expires: 1
